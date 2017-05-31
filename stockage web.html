@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<main>
+
+
+
+    <p id="col"></p>
+
+
+
+    <a href="#"><button id="btn">Couleur ???</button></a>
+
+<div id="col"></div>
+
+    <script>
+
+
+
+        document.getElementById('btn').onclick = function() {
+
+
+
+            sessionStorage.setItem("couleur","vert");
+
+            sessionStorage.couleur = "vert  #25252";
+
+
+
+            var couleur = sessionStorage.getItem("couleur");
+
+
+
+            document.getElementById('col').innerHTML = couleur;
+
+
+
+        };
+
+    </script>
+</body>
+</html>
