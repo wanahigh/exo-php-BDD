@@ -1,20 +1,20 @@
 <?php
-include('conexionpdo.php');
 
-$Titre=$_POST['Titre'];
-$Message=$_POST['Message'];
-$picture=$_FILES['Picture'];
+include('conexion pdo.php');
+
+
+$titre=$_POST['Titre'];
+$article=$_POST['Message'];
+$image=$_POST['Image'];
 
 $req = $bdd->prepare('INSERT INTO Formulaire(Sujet, Message, Image) VALUES(:Sujet, :Message, :Image)');
+$req->execute(array(
+    'Sujet' => $titre,
+    'Message' => $message,
+    'Image' => $image
 
-$req->execute([
+));
+header("index.php");
+?>
 
-    'Sujet' => $Titre,
 
-    'Message' => $Message,
-
-    'Image' => $picture
-
-]);
-
-header('index.php');

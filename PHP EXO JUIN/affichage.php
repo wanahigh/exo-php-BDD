@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>PHP exo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="js/bootstrap.js" ></script>
 </head>
 <body>
 
+<div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+        <div class="container">
 
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
 
-
-<nav class="nav navbar-inverse">
-    <a href="index.php"> remplir le formulaire</a>
-    <a href="affichage.php">verifier les réponses</a>
-</nav>
-
+            <!-- Be sure to leave the brand out there if you want it shown -->
+            <a class="brand" href="affichage.php">Afficher le journal</a>
+            <a class="brand" href="index.php">Ecrire un article</a>
+        </div>
+    </div>
+</div>
 
 
 <?php
-include('conexionpdo.php');
+include('conexion pdo.php');
 
-/* Exécute une requête préparée en passant un tableau de valeurs */
-$sth = $dbh->prepare('SELECT *
-    FROM Formulaire');
-$sth->execute(array());
-$red = $sth->fetchAll();
-
-
-/// On récupère tout le contenu de la table jeux_video
+$reponse = $bdd->query('SELECT * FROM Formulaire');
+$rep = $reponse->fetchAll();
+// var_dump($reponse1);
+foreach ($rep as $value) {
+    echo '<p>Titre : '.$value->Sujet.'</p><img src="./upload/' . $value->Image .'"> <p> Article : ' . $value->Message . '</p><hr>';
+}
 
 ?>
-
-
-<button btn btn-danger">Vérifier</button>
-
 </body>
 </html>

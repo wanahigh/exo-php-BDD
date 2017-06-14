@@ -1,19 +1,16 @@
 <?php
+$servername = "localhost";
+$username = "phpmyadmin";
+$password = "toor";
 
-try
-
-{
-
-    $bdd = new PDO('mysql:host=localhost;dbname=phpmyadmin;charset=utf8', 'phpmyadmin', 'toor');
-
+try {
+    $bdd = new PDO("mysql:host=$servername;dbname=phpmyadmin", $username, $password);
+    // set the PDO error mode to exception
+    $bdd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
+    $bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 }
-
-catch(Exception $e)
-
+catch(PDOException $e)
 {
-
-    die('Erreur : '.$e->getMessage());
-
+    echo "Connection failed: " . $e->getMessage();
 }
-
 ?>
