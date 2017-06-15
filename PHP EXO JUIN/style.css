@@ -1,7 +1,35 @@
-
 html
 {
-	background-image:url(abstract_floral_vintage_floral_pattern_vintage_pattern-1675.jpg);
+	background-image:url(upload/abstract_floral_vintage_floral_pattern_vintage_pattern-1675.jpg);
+}
+
+form
+{
+	margin-left:25%;
+	margin-right:25%;
+	background-color: #0e90d2;
+	-moz-box-shadow: 10px 10px 5px #656565;
+	-webkit-box-shadow: 10px 10px 5px #656565;
+	-o-box-shadow: 10px 10px 5px #656565;
+	box-shadow: 10px 10px 5px #656565;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color='#6565', Direction=135, Strength=5);
 
 }
 
+label{
+	text-align: center;
+	color:white;
+}
+
+input, textarea, #input
+{
+	background-color: #3d3b3e;
+	border-color: #0f0f0f;
+	box-shadow: #0f0d10;
+	margin-left:25%;
+	-moz-box-shadow: 10px 10px 5px #656565;
+	-webkit-box-shadow: 10px 10px 5px #656565;
+	-o-box-shadow: 10px 10px 5px #656565;
+	box-shadow: 10px 10px 5px #656565;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color='#6565', Direction=135, Strength=5);
+}

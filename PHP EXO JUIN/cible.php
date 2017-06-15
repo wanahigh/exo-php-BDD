@@ -14,7 +14,7 @@ $req->execute(array(
     'Image' => $image
 
 ));
-header("index.php");
+header('Location: affichage.php');
 ?>
 
 

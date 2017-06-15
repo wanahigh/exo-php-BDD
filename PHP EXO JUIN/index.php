@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <title>PHP exo</title>
@@ -25,17 +24,19 @@
         </div>
     </div>
 </div>
+<div class="form">
 <div class="container">
     <div class="input-group">
         <form  action="cible.php" method="post">
             <span  class="input-group-addon" id="basic-addon1"></span>
-            <input class="form-control" name="Titre"   value="" required type="text"/>
-            <input class="form-control" name="Message" value="" required type="text"/>
-            <input class="form-control" name="Image" value="" type="file"/>
-            <input class="btn btn-primary" type="submit"/>
+            <label>Votre titre :<div class="raw"><input id="input" class="form-control" name="Titre"   value="" required type="text"/></div></label>
+            <label>Votre message :<div class="raw"><textarea class="form-control" name="Message" value="" required type="text"/></textarea></div></label>
+            <label>Votre image :<div class="raw"><input class="form-control" name="Image" value="" type="file"/></div></label>
+            <div class="raw"><input class="btn btn-success" type="submit"/></div>
             <input type="reset" class="btn btn-primary"/>
         </form>
     </div>
+</div>
 </div>
 </body>
 </html>
