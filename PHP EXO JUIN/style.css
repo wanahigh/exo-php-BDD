@@ -33,3 +33,20 @@ input, textarea, #input
 	box-shadow: 10px 10px 5px #656565;
 	filter:progid:DXImageTransform.Microsoft.Shadow(color='#6565', Direction=135, Strength=5);
 }
+
+img{
+	width: 200px;
+	height:200px;
+	margin-left:43%;
+}
+
+p{
+	font-size: larger;
+	text-align:center;
+	font-family: 'Open Sans', sans-serif;
+	color:black;
+}
+
+ #bt1, #bt2{
+	 margin-left : 25%;
+ }

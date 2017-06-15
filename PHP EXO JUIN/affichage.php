@@ -33,12 +33,17 @@
 include('conexion pdo.php');
 
 $reponse = $bdd->query('SELECT * FROM Formulaire');
-$rep = $reponse->fetchAll();
-// var_dump($reponse1);
-foreach ($rep as $value) {
-    echo '<p>Titre : '.$value->Sujet.'</p><img src="./upload/' . $value->Image .'"> <p> Article : ' . $value->Message . '</p><hr>';
+$reponse1 = $reponse->fetchAll();
+foreach ($reponse1 as $value) {
+
+        echo '<div class="container-fluid"><div class="jumbotron"><p>Titre : '.$value->Sujet.'</p><img src="./upload/' . $value->Image .'"> <p> Article : ' . $value->Message . '</p></div></div>
+        
+            <a href=""><button id="bt1" class="btn btn-success">Mettre a jour</button></a>
+            <a href="supression.php?action=delete&id=' . $result->client_id . '"><button id="bt2" class="btn btn-danger">Effacer cet article</button></a><hr>';
 }
 
 ?>
+<script src="script.js"></script>
+
 </body>
 </html>

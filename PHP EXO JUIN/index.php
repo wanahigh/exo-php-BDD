@@ -27,7 +27,7 @@
 <div class="form">
 <div class="container">
     <div class="input-group">
-        <form  action="cible.php" method="post">
+        <form id="Formulaire" action="cible.php" method="post">
             <span  class="input-group-addon" id="basic-addon1"></span>
             <label>Votre titre :<div class="raw"><input id="input" class="form-control" name="Titre"   value="" required type="text"/></div></label>
             <label>Votre message :<div class="raw"><textarea class="form-control" name="Message" value="" required type="text"/></textarea></div></label>
@@ -38,5 +38,6 @@
     </div>
 </div>
 </div>
+<? include ('image.php') ?>
 </body>
 </html>
